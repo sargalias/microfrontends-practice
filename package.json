@@ -1,0 +1,9 @@
+{
+  "name": "microfrontends-practice",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "start-all": "concurrently \"npm run start -ws\""
+  }
+}
