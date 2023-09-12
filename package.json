@@ -4,6 +4,12 @@
     "packages/*"
   ],
   "scripts": {
-    "start-all": "concurrently \"npm run start -ws\""
+    "start-cart": "cd packages/cart && npm run start",
+    "start-container": "cd packages/container && npm run start",
+    "start-products": "cd packages/products && npm run start",
+    "start-all": "concurrently \"npm run start-cart\" \"npm run start-container\" \"npm run start-products\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.1"
   }
 }
